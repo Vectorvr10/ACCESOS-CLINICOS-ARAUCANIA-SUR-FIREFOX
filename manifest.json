@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "ACCESOS CLÍNICOS ARAUCANIA SUR",
+  "version": "2.1",
+  "description": "Herramientas y accesos rápidos para Medicina UFRO - SSASUR",
+  
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png", 
+    "128": "icon128.png"
+  },
+  
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "accesos-clinicos@medicinaufro",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  
+  "permissions": [
+    "activeTab",
+    "https://login.ssasur.cl/*",
+    "http://10.6.84.181/*",
+    "https://www.google.com/*",
+    "https://synapsetmc.synapsetimed.cl/*"
+  ],
+  
+  "web_accessible_resources": [
+    "images/*.png"
+  ],
+  
+  "content_scripts": [{
+    "matches": [
+      "https://login.ssasur.cl/*",
+      "http://10.6.84.181/*",
+      "https://www.google.com/*",
+      "https://synapsetmc.synapsetimed.cl/*"
+    ],
+    "js": ["content.js"],
+    "css": ["styles.css"],
+    "run_at": "document_idle"
+  }]
+}
