@@ -1,3 +1,5 @@
+### 🛜 EDICIÓN ESPECIAL PARA FIREFOX
+
 ### 📰 DESCRIPCIÓN
 
 Una herramienta de Accesos Clínicos para el Servicio de Araucanía Sur. Proporciona un menú flotante de acceso rápido a sistemas clínicos (HIS, Laboratorio, Rayos) para internos y personal médico en la red SSASUR.
