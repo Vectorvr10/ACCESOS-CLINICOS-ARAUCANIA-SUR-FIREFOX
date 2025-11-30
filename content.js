@@ -119,6 +119,8 @@ function createFloatingPanel() {
   
   // Header
   const header = createElementSafe('div', 'sidebar-header-hhha');
+  const fondoUrl = browser.runtime.getURL('images/fondo.png');
+  header.style.setProperty('--bg-image-url', `url("${fondoUrl}")`);
   
   const themeIndicator = createElementSafe('div', 'theme-indicator-hhha');
   const headerContent = createElementSafe('div', 'header-content-hhha');
