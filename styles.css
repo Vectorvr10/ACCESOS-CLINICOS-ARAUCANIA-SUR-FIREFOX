@@ -82,6 +82,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  --bg-image-url: none;
 }
 
 .sidebar-header-hhha::before {
@@ -91,7 +92,12 @@
   left: 0;
   right: 0;
   bottom: 0;
+  background-image: var(--bg-image-url);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   opacity: 0.1;
+  pointer-events: none;
 }
 
 .header-content-hhha { position: relative; z-index: 2; }
