@@ -108,7 +108,8 @@ function createFloatingPanel() {
   // Elementos del DOM
   const floatingBtn = document.createElement('button');
   floatingBtn.className = 'floating-panel-btn-hhha';
-  floatingBtn.textContent = '🏥';
+  const img = document.createElement('img');
+  img.src = browser.runtime.getURL("images/hospital.png");  img.style.width = '30px';  img.style.height = '30px';  img.style.objectFit = 'contain';  img.style.pointerEvents = 'none'; floatingBtn.appendChild(img);
   floatingBtn.title = 'Panel de Accesos Clínicos';
   
   const overlay = document.createElement('div');
@@ -152,7 +153,7 @@ function createFloatingPanel() {
   ufroLogo.className = 'ufro-small-logo';
   
   credits.appendChild(ufroLogo);
-  credits.appendChild(document.createTextNode('Hecho por Medicina UFRO. Versión 2.1'));
+  credits.appendChild(document.createTextNode('Hecho por Medicina UFRO. Versión 2.1.2'));
   
   footer.appendChild(credits);
   
