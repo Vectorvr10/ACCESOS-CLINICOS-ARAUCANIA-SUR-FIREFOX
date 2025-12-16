@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "ACCESOS CL\u00cdNICOS ARAUCANIA SUR",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Herramientas y accesos r\u00e1pidos para Medicina UFRO - SSASUR",
   "icons": {
     "16": "icon16.png",

@@ -5,8 +5,8 @@ const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const localIcons = {};
 [
   'hhha', 'ssasur', 'lab', 'test', 'synapse', 'ray', 'pathient', 'onco', 
-  'sangre', 'inthhha', 'otros', 'firma', 'bacteria', 'urgencia', 'tmt', 
-  'farmaco', 'embarazo', 'phone'
+  'sangre', 'hospital', 'otros', 'firma', 'bacteria', 'urgencia', 'tmt', 
+  'farmaco', 'embarazo', 'phone', 'medicamento'
 ].forEach(icon => {
   localIcons[icon] = browser.runtime.getURL(`images/${icon}.png`);
 });
@@ -22,7 +22,7 @@ const menuStructure = [
   { icon: '🔬', iconKey: 'pathient', text: 'Pathient', url: 'http://10.6.84.155/Pathient/' },
   { icon: '🎗️', iconKey: 'onco', text: 'Cómite Oncológico', url: 'https://sistemas.hhha.cl/#/login' },
   { icon: '🩸', iconKey: 'sangre', text: 'Banco de Sangre', url: 'http://10.6.84.191/proyectos/consultaBancoSangre/' },
-  { icon: '📚', iconKey: 'inthhha', text: 'Internado HHHA', url: 'https://inthhha.notion.site/' },
+  { icon: '📚', iconKey: 'hospital', text: 'Internado HHHA', url: 'https://inthhha.github.io/inicio/' },
   { 
     icon: '⚙️', iconKey: 'otros', text: 'Otros HHHA', 
     submenu: [
@@ -61,11 +61,11 @@ const menuStructure = [
     submenu: [
       { icon: '📖', iconKey: 'farmaco', text: 'Vademecum', url: 'https://www.iqb.es/cbasicas/farma/farma04/indicea.htm' },
       { icon: '🤰', iconKey: 'embarazo', text: 'Fármacos en Embarazo', url: 'https://www.araucaniasur.cl/wp-content/uploads/2023/01/GUIA-8-MEDICAMENTOS-EN-EMBARAZO-OK.pdf' },
-      { icon: '🦠', iconKey: 'bacteria', text: 'Espectro ATB', url: 'https://drive.google.com/file/d/1gl2hg1aZFHn-r1amCMyeGZZjva9JUks_/view?usp=drive_link' },
-      { icon: '🦠', iconKey: 'bacteria', text: 'Susceptibilidad ATB', url: 'https://drive.google.com/file/d/1vOt6XAYlCPnTKUHY92cpRLDSrw6HRYb6/view?usp=drive_link' }
+      { icon: '🦠', iconKey: 'medicamento', text: 'Espectro ATB', url: 'https://inthhha.github.io/inicio/files/ATB-EV.pdf' },
+      { icon: '🦠', iconKey: 'bacteria', text: 'Susceptibilidad ATB', url: 'https://inthhha.github.io/inicio/files/Espectros-ATB-2022.pdf' }
     ]
   },
-  { icon: '📱', iconKey: 'phone', text: 'Anexos', url: 'https://inthhha.notion.site/Anexos-1d874625032e801fac39ee717d941f8f' }
+  { icon: '📱', iconKey: 'phone', text: 'Anexos', url: 'https://inthhha.github.io/inicio/anexos.html' }
 ];
 
 // Funciones auxiliares
@@ -153,7 +153,7 @@ function createFloatingPanel() {
   ufroLogo.className = 'ufro-small-logo';
   
   credits.appendChild(ufroLogo);
-  credits.appendChild(document.createTextNode('Hecho por Medicina UFRO. Versión 2.1.2'));
+  credits.appendChild(document.createTextNode('Hecho por Medicina UFRO. Versión 2.1.3'));
   
   footer.appendChild(credits);
   

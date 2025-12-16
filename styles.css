@@ -376,3 +376,17 @@
   scrollbar-width: thin;
   scrollbar-color: var(--ssasur-blue) var(--secondary-bg);
 }
+
+/* Animaciones de Iconos */
+
+.sidebar-item-icon-hhha, 
+.submenu-item-icon-hhha {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar-item-hhha:hover .sidebar-item-icon-hhha,
+.submenu-item-hhha:hover .submenu-item-icon-hhha {
+  transform: scale(1.1) rotate(5deg);
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
